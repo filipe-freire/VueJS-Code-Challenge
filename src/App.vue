@@ -3,14 +3,14 @@
     <section>
       <div class="head">
         <h2>Next events</h2>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" v-model="searchInput" />
       </div>
       <!-- CardList Container -->
       <div v-if="services.length">
         <!-- Each card Here -->
 
         <service-card
-          v-for="service of services"
+          v-for="service of filterServices()"
           v-bind:key="service.id"
           :data="service"
         />
@@ -32,7 +32,27 @@ export default {
   data() {
     return {
       services: null,
+      searchInput: "",
     };
+  },
+  methods: {
+    filterServices() {
+      if (!this.searchInput) {
+        return this.services;
+      }
+
+      const normalizedInput = this.searchInput.toLowerCase();
+      const regex = new RegExp(`${normalizedInput}`, "ig");
+
+      const filteredArr = this.services.filter((service) => {
+        return (
+          service.name.toLowerCase().match(regex) ||
+          service.description.toLowerCase().match(regex)
+        );
+      });
+
+      return filteredArr;
+    },
   },
   created() {
     this.services = mockServices.events;
