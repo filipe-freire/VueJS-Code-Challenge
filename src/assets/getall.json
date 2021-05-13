@@ -1,0 +1,50 @@
+{
+  "totalEvents": 5,
+  "events": [
+    {
+      "id": 1,
+      "name": "Passeio de Barco",
+      "description": "Um excelente passeio de barco para 52 pessoas ao longo da costa para vislumbrar as lindissimas grutas da nossa costa.",
+      "eventStart": "2021-05-13T10:00:00+01:00",
+      "eventEnd": "2021-05-13T13:00:00+01:00",
+      "capacity": 52,
+      "booked": 10
+    },
+    {
+      "id": 2,
+      "name": "Passeio de Barco",
+      "description": "Um excelente passeio de barco para 25 pessoas onde poderá ver golfinhos e outros cetáceos.",
+      "eventStart": "2021-05-13T10:00:00+01:00",
+      "eventEnd": "2021-05-13T13:00:00+01:00",
+      "capacity": 25,
+      "booked": 24
+    },
+    {
+      "id": 3,
+      "name": "Passeio de Mota",
+      "description": "Passeio de Mota pelas paisagens algarvias. ",
+      "eventStart": "2021-05-13T14:00:00+01:00",
+      "eventEnd": "2021-05-13T18:00:00+01:00",
+      "capacity": 52,
+      "booked": 10
+    },
+    {
+      "id": 4,
+      "name": "Passeio de Canoa",
+      "description": "Um relaxante passeio de canoa efectuado em grupos de 10 pessoas com 1h de duração.",
+      "eventStart": "2021-05-13T09:00:00+01:00",
+      "eventEnd": "2021-05-13T10:00:00+01:00",
+      "capacity": 10,
+      "booked": 2
+    },
+    {
+      "id": 5,
+      "name": "Passeio de canoa",
+      "description": "Um relaxante passeio de canoa efectuado em grupos de 10 pessoas com 3h de duração.",
+      "eventStart": "2021-05-13T10:00:00+01:00",
+      "eventEnd": "2021-05-13T13:00:00+01:00",
+      "capacity": 10,
+      "booked": 5
+    }
+  ]
+}
