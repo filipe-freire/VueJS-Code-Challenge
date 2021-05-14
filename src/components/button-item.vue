@@ -1,7 +1,6 @@
 <template>
   <button @click="btnToggle" class="btn" :class="btnType">
-    <i :class="iconClass"></i
-    >{{ btnType === "regular" ? defaultText : btnType }}
+    <i :class="iconClass" />{{ btnType === "regular" ? defaultText : btnType }}
   </button>
 </template>
 
@@ -30,7 +29,7 @@ export default {
   },
   methods: {
     btnToggle(e) {
-      const btnClasses = [...e.target.classList];
+      const btnClasses = [...e.currentTarget.classList];
 
       if (btnClasses.includes("edit")) {
         return this.$emit("handle-edit");
@@ -60,13 +59,18 @@ export default {
       if (this.btnType === "delete") {
         return "far fa-trash-alt";
       }
+
       if (this.btnType === "save") {
         return "far fa-save";
       }
+
       if (this.btnType === "cancel") {
         return "far fa-meh";
       }
-      if (this.btnType === "edit") return "far fa-edit";
+
+      if (this.btnType === "edit") {
+        return "far fa-edit";
+      }
       return "regular";
     },
   },
@@ -85,6 +89,11 @@ export default {
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
+  transition: all 250ms ease-out;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 3px 2px #3e3e3e0c;
 }
 .btn + .btn {
   margin-left: 1ch;

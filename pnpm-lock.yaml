@@ -4,8 +4,10 @@ specifiers:
   '@vue/cli-plugin-babel': ~4.5.0
   '@vue/cli-plugin-eslint': ~4.5.0
   '@vue/cli-service': ~4.5.0
+  axios: ^0.21.1
   babel-eslint: ^10.1.0
   core-js: ^3.6.5
+  dotenv: ^9.0.2
   eslint: ^6.7.2
   eslint-plugin-vue: ^6.2.2
   vue: ^2.6.11
@@ -19,7 +21,9 @@ devDependencies:
   '@vue/cli-plugin-babel': 4.5.13_873a9ffdf7854442b9acc2f5aa2a81d5
   '@vue/cli-plugin-eslint': 4.5.13_a58cf9e4d577795b8c257bee96d49483
   '@vue/cli-service': 4.5.13_vue-template-compiler@2.6.12
+  axios: 0.21.1
   babel-eslint: 10.1.0_eslint@6.8.0
+  dotenv: 9.0.2
   eslint: 6.8.0
   eslint-plugin-vue: 6.2.2_eslint@6.8.0
   vue-template-compiler: 2.6.12
@@ -2064,6 +2068,14 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: true
 
+  /axios/0.21.1:
+    resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
+    dependencies:
+      follow-redirects: 1.14.1
+    transitivePeerDependencies:
+      - debug
+    dev: true
+
   /babel-eslint/10.1.0_eslint@6.8.0:
     resolution: {integrity: sha512-ifWaTHQ0ce+448CYop8AdrQiBsGrnC+bMgfyKFdi6EsPLTAWG+QfyDeM6OH+FmWnKvEq5NnBMLvlBUPKQZoDSg==}
     engines: {node: '>=6'}
@@ -3395,6 +3407,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /dotenv/9.0.2:
+    resolution: {integrity: sha512-I9OvvrHp4pIARv4+x9iuewrWycX6CcZtoAu1XrzPxc5UygMJXJZYmBsynku8IkrJwgypE5DGNjDPmPRhDCptUg==}
+    engines: {node: '>=10'}
+    dev: true
+
   /duplexer/0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
     dev: true
@@ -4045,7 +4062,7 @@ packages:
       readable-stream: 2.3.7
     dev: true
 
-  /follow-redirects/1.14.1_debug@4.3.1:
+  /follow-redirects/1.14.1:
     resolution: {integrity: sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==}
     engines: {node: '>=4.0'}
     peerDependencies:
@@ -4053,8 +4070,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dependencies:
-      debug: 4.3.1
     dev: true
 
   /for-in/1.0.2:
@@ -4558,7 +4573,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.1_debug@4.3.1
+      follow-redirects: 1.14.1
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
